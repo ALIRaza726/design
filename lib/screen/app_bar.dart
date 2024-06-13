@@ -763,6 +763,31 @@ class _AppBarScState extends State<AppBarSc> {
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10))),
                       ),
+                     
+                     SizedBox(height: 20),
+                      TextFormField(
+                        // Two digits after (.) value
+                         keyboardType: TextInputType.number,
+                         inputFormatters: [
+                        FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}')),
+                ],
+                        onFieldSubmitted: (value) {},
+                        controller: _textfieldController,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter a value';
+                          }
+                          return null;
+                        },
+                        decoration: InputDecoration(
+                            errorBorder: const OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.red)),
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10))),
+                      ),
+                     
                       Center(
                         child: ElevatedButton(
                           onPressed: () {
