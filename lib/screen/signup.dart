@@ -127,6 +127,7 @@ class _signupState extends State<signup> {
                         height: 50,
                         child: TextFormField(
                           keyboardType: TextInputType.emailAddress,
+                          
                           controller: _EmailController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {

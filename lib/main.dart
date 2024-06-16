@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Medidate',
           theme:
-              ThemeProvider.isDarkTheme ? ThemeData.dark() : ThemeData.light(),
+              ThemeProvider.isDarkTheme ?  ThemeData.light():ThemeData.dark() ,
           home:
               //MyApp(),
               //practice(),
